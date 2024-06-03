@@ -1,73 +1,148 @@
-# Project Deployed in: 
+# Chat Application using Chat Engine
+
+This is a web-based chat application built with React and powered by Chat Engine for real-time messaging. The application allows users to create accounts, join multiple chat rooms, and send/receive messages in real-time.
+
+## Project Deployed in: 
 check this website on netlify: [Chat Application](https://chatappbychatengine.netlify.app).
 
-# Getting Started with Create React App
+## Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- User Authentication
+- Real-time Messaging
+- Multiple Chat Rooms
+- User-Friendly Interface
+- Responsive Design
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React**: Front-end library for building user interfaces.
+- **Chat Engine**: Backend as a service for chat applications.
+- **Netlify**: Platform for deploying and hosting the web application.
+- **Create React App**: Tool to set up a modern web app by configuring build tools like Webpack and Babel.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get a local copy up and running, follow these steps.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm installed on your machine.
+- Chat Engine account for managing chat rooms and users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/ShahriarAlvi/Chat-Application-using-Chat-Engine.git
+   cd Chat-Application-using-Chat-Engine
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install NPM packages:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Create a `.env` file in the root directory and add your Chat Engine credentials:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```plaintext
+   REACT_APP_CHAT_ENGINE_PROJECT_ID=your-project-id
+   REACT_APP_CHAT_ENGINE_USER_NAME=your-username
+   REACT_APP_CHAT_ENGINE_USER_SECRET=your-secret
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   npm start
+   ```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy the application, follow these steps:
 
-### `npm run build` fails to minify
+1. **Build the application:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to Netlify:**
+   - Link your GitHub repository to Netlify.
+   - Choose the `build` directory as the deploy folder.
+
+## Usage
+
+### Running the Application
+
+- **Development Mode:**
+
+  ```bash
+  npm start
+  ```
+
+- **Testing:**
+
+  ```bash
+  npm test
+  ```
+
+- **Building for Production:**
+
+  ```bash
+  npm run build
+  ```
+
+### Project Structure
+
+```plaintext
+public/
+  index.html
+src/
+  components/
+    ChatFeed.js
+    MessageForm.js
+    MyMessage.js
+    TheirMessage.js
+  App.js
+  index.js
+  index.css
+.env
+.gitignore
+package.json
+README.md
+```
+
+## Key Components
+
+### `App.js`
+
+Main component that sets up the Chat Engine with required credentials and renders the custom `ChatFeed` component.
+
+### `ChatFeed.js`
+
+Handles rendering of chat messages, including differentiating between user messages and other messages, and displays read receipts.
+
+### `MessageForm.js`
+
+Provides an input field for sending messages and manages the state of the input.
+
+### `MyMessage.js`
+
+Renders messages sent by the current user, handling both text and image attachments.
+
+### `TheirMessage.js`
+
+Renders messages sent by other users, including their avatars and message content.
+
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Chat Engine](https://chatengine.io/)
+- [Netlify](https://www.netlify.com/)
+- [Create React App](https://create-react-app.dev/)
+
+---
+
